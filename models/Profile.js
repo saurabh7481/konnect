@@ -8,7 +8,7 @@ const ProfileSchema = new Schema({
     },
     handle: {
         type: String,
-        required: true,
+        required: false,
         max: 30
     },
     company: {
@@ -76,7 +76,7 @@ const ProfileSchema = new Schema({
            },
            field: {
                type: String,
-               required: true
+               required: false
            },
            from: {
                type: Date,

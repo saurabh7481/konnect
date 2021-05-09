@@ -5,8 +5,7 @@ import store from './store'
 import Navbar from './components/Layout/Navbar';
 import Footer from './components/Layout/Footer';
 import Landing from './components/Layout/Landing';
-import Login from './components/Auth/Login';
-import Register from './components/Auth/Register';
+import Routes from './Routes/Routes';
 
 function App() {
   return (
@@ -16,8 +15,7 @@ function App() {
           <Navbar/>
           <Route path="/" exact component={Landing}/>
           <div className='container'>
-            <Route path="/login" exact component={Login} />
-            <Route path="/register" exact component={Register} />
+            <Route component={Routes} />
           </div>
           <Footer/>
         </div>
