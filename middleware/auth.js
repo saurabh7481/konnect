@@ -8,6 +8,8 @@ module.exports = function (req, res, next) {
   // Check if not token
   if (header) {
     token = req.headers.authorization.split(' ')[1];
+  } else if(req.header('x-auth-token') !== null){
+    token = req.header('x-auth-token');
   } else {
     return res.status(401).json({ msg: 'No token, authorization denied' });
   }
